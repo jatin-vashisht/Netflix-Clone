@@ -1,6 +1,4 @@
-import {createUseStyles} from 'react-jss'
-
-export default createUseStyles({
+const styles = (theme) => ({
     root: {
         display: 'flex',
         height: '100%'
@@ -12,4 +10,6 @@ export default createUseStyles({
         flexGrow: 1,
         padding: '2em'
     }
-  })
+})
+
+export default styles
