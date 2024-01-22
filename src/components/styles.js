@@ -8,7 +8,7 @@ const styles = (theme) => ({
     },
     content: {
         flexGrow: 1,
-        padding: '2em'
+        padding: '2rem 1rem 2rem 4rem'
     }
 })
 
