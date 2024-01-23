@@ -24,7 +24,7 @@ const NavBar = () => {
   const theme = useTheme();
   const classes = styles(theme);
   const isMobile = useMediaQuery("(max-width: 600px)");
-  const [mobileOpen, setMobileOpen] = useState(true);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const dispatch = useDispatch()
   const token = localStorage.getItem('request_token');
   const sessionIdFromLocalStorage = localStorage.getItem('session_id');

@@ -1,5 +1,5 @@
 import React from "react";
-import { CssBaseline, useTheme } from "@mui/material";
+import { Box, CssBaseline, useTheme } from "@mui/material";
 import { Route, Routes } from "react-router-dom";
 import { Actors, Movies, MovieInformation, NavBar, Profile } from "./index";
 import styles from "./styles.js";
@@ -11,7 +11,7 @@ const App = () => {
     <div style={classes.root}>
       <CssBaseline />
       <NavBar />
-      <main style={classes.content}>
+      <Box sx={classes.content}>
         <div style={classes.toolbar} />
         <Routes>
           <Route path="/" element={<Movies />} />
@@ -19,7 +19,7 @@ const App = () => {
           <Route path="/actors/:id" element={<Actors />} />
           <Route path="/profile/:id" element={<Profile />} />
         </Routes>
-      </main>
+      </Box>
     </div>
   );
 };
