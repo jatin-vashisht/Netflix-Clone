@@ -10,8 +10,9 @@ const styles = (theme) => ({
         flexGrow: 1,
         padding: '2rem',
         [theme.breakpoints.up('md')]: {
-            padding: '2rem 1rem 2rem 4rem'
-        }
+            padding: '2rem 1rem 2rem 3rem'
+        },
+        width: '100%'
     }
 })
 

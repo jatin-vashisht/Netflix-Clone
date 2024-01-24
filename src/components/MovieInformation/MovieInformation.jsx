@@ -53,7 +53,7 @@ const MovieInformation = () => {
 
   return (
     <Grid container sx={classes.containerSpaceAround}>
-      <Grid item sm={12} lg={4}>
+      <Grid item sm={12} lg={4} style={{marginBottom: '30px'}}>
         <Box sx={classes.posterContainer}>
           <img
             style={classes.poster}
@@ -81,10 +81,7 @@ const MovieInformation = () => {
             </Typography>
           </Box>
           <Typography variant="h6" align="center" gutterBottom>
-            {data?.runtime}min{" "}
-            {data?.spoken_languages.length > 0
-              ? `/ ${data?.spoken_languages[0].name}`
-              : ""}
+            {data?.runtime}min{" "} | Language: {data?.spoken_languages[0].name}
           </Typography>
         </Grid>
         <Grid item sx={classes.genresContainer}>

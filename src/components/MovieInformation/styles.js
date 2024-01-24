@@ -14,13 +14,11 @@ const styles = (theme) => ({
     [theme.breakpoints.down("md")]: {
       margin: "0 auto",
       width: "50%",
-      // height: '350px',
     },
     [theme.breakpoints.down("sm")]: {
       margin: "0 auto",
       width: "100%",
       height: "350px",
-      marginBottom: "30px",
     },
   },
   poster: {
