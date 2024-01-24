@@ -11,8 +11,8 @@ const styles = (theme) => ({
         color: theme.palette.text.primary,
         textDecoration: 'none'
     },
-    genreImages: {
-        filter: theme.palette.mode === 'dark' ? 'invert(1)' : 'dark',
+    genreImage: {
+        filter: theme.palette.mode === 'dark' && 'invert(1)',
     }
 })
 
