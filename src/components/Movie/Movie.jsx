@@ -15,7 +15,7 @@ const Movie = ({ movie, i }) => {
   const theme = useTheme();
   const classes = styles(theme);
   return (
-    <Grid item xs={12} sm={6} md={4} lg={3} xl={2} style={classes.movie}>
+    <Grid item xs={12} sm={6} md={4} lg={3} xl={2} sx={classes.movie}>
       <Grow in key={i} timeout={(i + 1) * 250}>
         <Link sx={classes.links} href={`/movie/${movie.id}`}>
           <Box sx={classes.image}>
