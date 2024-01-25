@@ -23,10 +23,7 @@ const categories = [
   { label: "Upcoming", value: "upcoming" },
 ];
 
-const redLogo =
-  "https://fontmeme.com/permalink/210930/8531c658a743debe1e1aa1a2fc82006e.png";
-const blueLogo =
-  "https://fontmeme.com/permalink/210930/6854ae5c7f76597cf8680e48a2c8a50a.png";
+const logo = 'https://firebasestorage.googleapis.com/v0/b/disney-plus-hotstar-clon-13914.appspot.com/o/images%2Flogo.png?alt=media&token=f2483cb9-28a2-4f73-9492-acf37dba5576'
 
 const Sidebar = ({ setMobileOpen }) => {
   const theme = useTheme();
@@ -39,8 +36,8 @@ const Sidebar = ({ setMobileOpen }) => {
       <Link to="/" style={classes.imageLink}>
         <img
           style={classes.image}
-          src={theme.palette.mode === "light" ? redLogo : blueLogo}
-          alt="Filmpire Logo"
+          src={logo}
+          alt="Netflix Logo"
         />
       </Link>
       <Divider />

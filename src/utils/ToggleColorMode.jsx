@@ -4,11 +4,7 @@ import { createContext, useMemo, useState } from "react";
 export const ColorModeContext = createContext()
 
 const ToggleColorMode = ({children}) => {
-    const [mode, setMode] = useState('light')
-
-    const toggleColorMode = () => {
-        setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'))
-    }
+    const [mode, setMode] = useState(localStorage.getItem('backgroundMode') || 'light')
 
     const theme = useMemo(() => createTheme({
         palette: {
@@ -16,8 +12,14 @@ const ToggleColorMode = ({children}) => {
         }
     }), [mode])
 
+    const toggleColorMode = () => {
+        setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'))
+        localStorage.setItem('backgroundMode',mode === 'light'? 'dark' : 'light')
+    }
+
+
     return (
-        <ColorModeContext.Provider value={{mode, setMode, toggleColorMode, theme}}>
+        <ColorModeContext.Provider value={{mode, setMode, toggleColorMode}}>
             <ThemeProvider theme={theme}>
                 {children}
             </ThemeProvider>

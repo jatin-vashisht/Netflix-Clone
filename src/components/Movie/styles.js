@@ -31,7 +31,8 @@ const styles = (theme) => ({
         borderRadius: '20px',
         height: '275px',
         '&:hover': {
-            transform: 'scale(1.05)'
+            transform: 'scale(1.05)',
+            transition: 'all 0.25s',
         }
     }
 })

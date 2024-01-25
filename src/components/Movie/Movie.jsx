@@ -6,10 +6,10 @@ import {
   Tooltip,
   Rating,
   Box,
-  Link,
 } from "@mui/material";
 import React from "react";
 import styles from "./styles";
+import { Link } from "react-router-dom";
 
 const Movie = ({ movie, i }) => {
   const theme = useTheme();
@@ -17,7 +17,7 @@ const Movie = ({ movie, i }) => {
   return (
     <Grid item xs={12} sm={6} md={4} lg={3} xl={2} sx={classes.movie}>
       <Grow in key={i} timeout={(i + 1) * 250}>
-        <Link sx={classes.links} href={`/movie/${movie.id}`}>
+        <Link style={classes.links} to={`/movie/${movie.id}`}>
           <Box sx={classes.image}>
             <img
               alt={movie.title}

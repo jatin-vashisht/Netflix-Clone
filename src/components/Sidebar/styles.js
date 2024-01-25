@@ -5,7 +5,7 @@ const styles = (theme) => ({
         padding: '10% 0'
     },
     image: {
-        width: '70%'
+        width: '150px'
     },
     link: {
         color: theme.palette.text.primary,

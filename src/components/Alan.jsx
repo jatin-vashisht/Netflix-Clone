@@ -7,20 +7,16 @@ import { useDispatch } from "react-redux";
 import {selectGenreOrCategory, searchMovie} from '../features/genreOrCategory'
 
 const useAlan = () => {
-  const { setMode } = useContext(ColorModeContext);
+  const { toggleColorMode } = useContext(ColorModeContext);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   useEffect(() => {
     alanBtn({
       key: process.env.REACT_APP_ALAN_KEY,
-      onCommand: ({ command, mode, genres, genreOrCategory, query }) => {
+      onCommand: ({ command, genres, genreOrCategory, query }) => {
         if (command === "changeMode") {
-          if (mode === "light") {
-            setMode("light");
-          } else {
-            setMode("dark");
-          }
+          toggleColorMode()
         } else if (command === "login") {
           fetchToken();
         } else if (command === "logout") {
@@ -44,7 +40,7 @@ const useAlan = () => {
         }
       },
     });
-  }, [dispatch, navigate, setMode]);
+  }, [dispatch, navigate, toggleColorMode]);
 };
 
 export default useAlan;
