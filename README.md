@@ -6,7 +6,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/jatin-vashisht/Netflix-Clone">
-    <img src="./logo.png" alt="Netflix Logo" width="252" height="85">
+    <img src="https://firebasestorage.googleapis.com/v0/b/disney-plus-hotstar-clon-13914.appspot.com/o/images%2Flogo.png?alt=media&token=f2483cb9-28a2-4f73-9492-acf37dba5576" alt="Netflix Logo" width="252" height="85">
   </a>
 
   <h2 align="center">Netflix - Jatin Vashisht</h2>
@@ -50,7 +50,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://netflix-jatin.netlify.app/)
+![Preview](https://firebasestorage.googleapis.com/v0/b/disney-plus-hotstar-clon-13914.appspot.com/o/images%2FScreenshot%20(2).png?alt=media&token=15ab3077-5aae-47e1-a988-770d764f7eaf)
+
 
 Netflix combines the desire to unleash powerful creativity with the industry's most advanced JavaScript tools including React.js, Redux, Material UI, Alan AI, and more.
 
