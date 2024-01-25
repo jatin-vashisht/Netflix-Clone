@@ -19,6 +19,7 @@ import { createSessionId, fetchToken, moviesApi } from "../../utils";
 import { useDispatch, useSelector } from "react-redux";
 import {setUser} from '../../features/auth'
 import { ColorModeContext} from '../../utils/ToggleColorMode'
+import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
   const {isAuthenticated, user} = useSelector((state) => state.userReducer)
@@ -31,6 +32,7 @@ const NavBar = () => {
   const sessionIdFromLocalStorage = localStorage.getItem('session_id');
 
   const colorMode = useContext(ColorModeContext)
+  const navigate = useNavigate()
 
   useEffect(() => {
     const logInUser = async () => {
@@ -75,9 +77,8 @@ const NavBar = () => {
               <Button
                 color="inherit"
                 component={Link}
-                href={`/profile/${user.id}`}
                 style={classes.linkButton}
-                onClick={() => {}}
+                onClick={() => navigate(`/profile/${user.id}`)}
               >
                 {!isMobile && <>My Movies &nbsp;</>}
                 <Avatar
