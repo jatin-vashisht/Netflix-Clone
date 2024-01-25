@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 import styles from "./styles";
 import { useGetGenresQuery } from "../../services/TMDB";
 import genreIcons from "../../assets/genres";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import {selectGenreOrCategory} from '../../features/genreOrCategory'
 
@@ -34,7 +34,6 @@ const Sidebar = ({ setMobileOpen }) => {
   const { data, isFetching } = useGetGenresQuery();
 
   const dispatch = useDispatch()
-  const {genreIdOrCategoryName} = useSelector((state) => state.genreOrCategoryReducer)
   return (
     <>
       <Link to="/" style={classes.imageLink}>
@@ -51,7 +50,7 @@ const Sidebar = ({ setMobileOpen }) => {
           <Link key={value} style={classes.link} to="/">
             <ListItem onClick={() => {dispatch(selectGenreOrCategory(value)); setMobileOpen(false)}} button>
             <ListItemIcon>
-                  <img src={genreIcons[label.toLowerCase()]} style={classes.genreImage} height={30} />
+                  <img src={genreIcons[label.toLowerCase()]} style={classes.genreImage} height={30} alt="Genre Icon" />
                 </ListItemIcon>
               <ListItemText primary={label} />
             </ListItem>
@@ -70,7 +69,7 @@ const Sidebar = ({ setMobileOpen }) => {
             <Link key={name} style={classes.link} to="/">
             <ListItem onClick={() => {dispatch(selectGenreOrCategory(id)); setMobileOpen(false)}} button>
                 <ListItemIcon>
-                  <img src={genreIcons[name.toLowerCase()]} style={classes.genreImage} height={30} />
+                  <img src={genreIcons[name.toLowerCase()]} style={classes.genreImage} height={30} alt="Genre Icon" />
                 </ListItemIcon>
                 <ListItemText primary={name} />
               </ListItem>

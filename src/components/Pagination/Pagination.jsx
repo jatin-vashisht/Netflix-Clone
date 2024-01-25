@@ -1,7 +1,6 @@
 import { Box, Button, Typography, useTheme } from "@mui/material";
 import styles from "./styles";
-import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import {setPage} from '../../features/genreOrCategory'
 const Pagination = ({currentPage, totalPages}) => {
   const theme = useTheme();

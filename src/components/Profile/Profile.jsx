@@ -23,7 +23,7 @@ const Profile = () => {
   useEffect(() => {
     refetchFavorites()
     refetchWatchlisted()
-  }, [])
+  }, [refetchFavorites, refetchWatchlisted])
 
   const logout = () => {
     localStorage.clear();

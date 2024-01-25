@@ -45,7 +45,7 @@ const MovieInformation = () => {
   const { data, error, isFetching } = useGetMovieQuery(id);
   const {data: favoriteMovies} = useGetListQuery({listName: 'favorite/movies', accountId: user.id, sessionId: localStorage.getItem("session_id"), page: 1})
   const {data: watchlistMovies} = useGetListQuery({listName: 'watchlist/movies', accountId: user.id, sessionId: localStorage.getItem("session_id"), page: 1})
-  const { data: recommendations, isFetching: isRecommendationsFetching } = useGetRecommendationsQuery({ list: "/recommendations", movie_id: id });
+  const { data: recommendations } = useGetRecommendationsQuery({ list: "/recommendations", movie_id: id });
   
   const [isMovieFavorited, setIsMovieFavorited] = useState(false)
   const [isMovieWatchlisted, setIsMovieWatchlisted] = useState(false)
@@ -141,6 +141,7 @@ const MovieInformation = () => {
                   src={genreIcons[genre.name.toLowerCase()]}
                   style={classes.genreImage}
                   height={30}
+                  alt="Genre Icon"
                 />
                 <Typography color="textPrimary" variant="subtitle1">
                   {genre?.name}
